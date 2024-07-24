@@ -16,8 +16,6 @@ Para utilizar devcontainer basta con instalar la extensión "Dev Containers" en 
 Una vez instalado solo es necesario ejecutar `npm run dev` para ejecutar la aplicación en
 http://localhost:3000/
 
-## DevContainer (Recomendado)
-
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
