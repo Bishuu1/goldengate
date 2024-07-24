@@ -54,9 +54,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     </main>
                     <footer className="bg-gray-800 text-white py-4">
                         <div className="container mx-auto px-4">
-                            <p>
-                                &copy; 2024 Unsplash Clone. All rights reserved.
-                            </p>
+                            <p>&copy; 2024 Unsplash Clone.</p>
                         </div>
                     </footer>
                 </div>
