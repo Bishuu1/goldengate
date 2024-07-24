@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 const photos = [
     {
         id: 1,
@@ -63,7 +63,14 @@ const HomePage: React.FC = () => {
                                         />
                                     </div>
                                     <span className="absolute bottom-2 left-2 flex items-center bg-gray-800 bg-opacity-40 p-2 rounded">
-                                        <div className="w-4 h-4 border-2 border-white rounded-full"></div>
+                                        <svg className="inline-block h-10 w-10 rounded-full">
+                                            <circle
+                                                cx="5"
+                                                cy="5"
+                                                r="50"
+                                                fill="blue"
+                                            />
+                                        </svg>
                                         <div className="ml-2 text-white">
                                             Texto de ejemplo
                                         </div>
