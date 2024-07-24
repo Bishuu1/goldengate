@@ -1,3 +1,23 @@
+# GoldenGateTheMostIncredibleThing
+
+Este sitio hecho en honor al Golden Gate esta construido construido con React mediante NextJS, además de, TailwindCSS, ShadCN y Typescript. Esto principalmente porque fue utilizado para re-aprender desarrollo frontend con tecnologías actuales y con beneficios como el ServerSide Rendering.
+
+Además, se usaron tecnologías de apoyo para el desarrollo como lo son Docker/DevContainer de manera de asegurar su correcta ejecución en cualquier SO.
+
+Para ejecutar esta App se puede ejecutar con Docker, DevContainer o directamente con la aplicación.
+
+## DevContainer (Recomendado)
+
+Dev Containers es una tecnología basada en contenedores que permite útilizar imágenes de docker directamente conectadas a VSCode, de esta manera todas las dependencias de desarrollo quedan encapsuladas en el contenedor -incluso las extensiones útilizadas- y no se carga contenido "basura" dentro de la máquina Host.
+Para utilizar devcontainer basta con instalar la extensión "Dev Containers" en VSCode y Docker Desktop.
+
+![DevContainer](image.png)
+
+Una vez instalado solo es necesario ejecutar `npm run dev` para ejecutar la aplicación en
+http://localhost:3000/
+
+## DevContainer (Recomendado)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -24,8 +44,8 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+-   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
