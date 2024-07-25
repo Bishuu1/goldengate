@@ -12,6 +12,7 @@
     "@radix-ui/react-avatar": "^1.1.0",
     "@radix-ui/react-icons": "^1.3.0",
     "@radix-ui/react-slot": "^1.1.0",
+    "@uidotdev/usehooks": "^2.4.1",
     "axios": "^1.7.2",
     "cheerio": "^1.0.0-rc.12",
     "class-variance-authority": "^0.7.0",
@@ -21,7 +22,8 @@
     "react": "^18",
     "react-dom": "^18",
     "tailwind-merge": "^2.4.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "use-media": "^1.5.0"
   },
   "devDependencies": {
     "@types/node": "^20",
