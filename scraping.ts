@@ -17,7 +17,10 @@ interface Photo {
 
 const UNSPLASH_URL = "https://unsplash.com/s/photos/golden-gate";
 
-export async function scrapingPhotos(numberPhotos = 19): Promise<Photo[]> {
+export async function scrapingPhotos(
+    startIndex = 0,
+    numberPhotos = 20
+): Promise<Photo[]> {
     try {
         const response = await fetch(UNSPLASH_URL, { cache: "no-store" });
         const data = await response.text();
@@ -27,7 +30,10 @@ export async function scrapingPhotos(numberPhotos = 19): Promise<Photo[]> {
         const authorProfiles: Array<Promise<Author | null>> = [];
 
         $("figure").each((index, element) => {
-            if (index >= numberPhotos) {
+            if (index < startIndex) {
+                return;
+            }
+            if (index >= startIndex + numberPhotos) {
                 return false;
             }
             const imgElement = $(element).find("img[srcset]").last();
@@ -59,7 +65,7 @@ export async function scrapingPhotos(numberPhotos = 19): Promise<Photo[]> {
                 authorProfiles.push(authorProfilePromise);
 
                 photos.push({
-                    id: index + 1,
+                    id: index,
                     url: imgUrl,
                     profileUrl: `https://unsplash.com${profileUrl}`,
                     tags: tags,
@@ -93,7 +99,11 @@ async function scrapeAuthorProfile(profileUrl: string) {
         if (username) {
             username = username.split("|")[0].trim();
         }
-        const profileImageUrl = $("img.Lg6wf.eqnCe").attr("src");
+        const srcSet = $("img.Lg6wf.eqnCe").attr("srcset");
+        const profileImageUrl = srcSet
+            ?.split(",")
+            .map((item) => item.trim().split(" ")[0])
+            .pop();
         const twitter = $('meta[name="twitter:creator"]').attr("content");
 
         return {

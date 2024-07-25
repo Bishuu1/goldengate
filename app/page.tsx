@@ -1,13 +1,8 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { scrapingPhotos } from "../scraping";
 import { useWindowSize } from "@uidotdev/usehooks";
-
-interface Author {
-    username: string | undefined;
-    profileImageUrl: string | undefined;
-    twitter: string | undefined;
-}
+import { Button } from "../components/ui/button";
 
 interface Photo {
     id: number;
@@ -16,25 +11,34 @@ interface Photo {
     tags: string[];
     author: any;
 }
-interface HomePageProps {
-    photos: Photo[];
-}
-const HomePage: React.FC<HomePageProps> = () => {
+
+const HomePage: React.FC = () => {
     const [photos, setPhotos] = useState<Photo[]>([]);
     const [hoveredPhoto, setHoveredPhoto] = useState<number | null>(null);
+    const [startIndex, setStartIndex] = useState(0);
+    const [loading, setLoading] = useState(false);
     const size = useWindowSize();
 
+    const loadPhotos = async (index: number, numberPhotos: number) => {
+        console.log("loadPhotos");
+        setLoading(true);
+        const newPhotos: Photo[] = await scrapingPhotos(index, numberPhotos);
+        setPhotos((prevPhotos) => [...prevPhotos, ...newPhotos]);
+        setStartIndex(index + numberPhotos);
+        setLoading(false);
+    };
+
     useEffect(() => {
-        async function getData() {
-            const photos: Photo[] = await scrapingPhotos();
-            setPhotos(photos);
-        }
-        getData();
+        loadPhotos(0, 20); // Carga inicial de fotos
     }, []);
 
     const getColumns = (photos: Photo[]) => {
-        const columns = size.width >= 1024 ? 3 : size.width >= 768 ? 2 : 1;
-
+        const columns =
+            size.width && size.width >= 1024
+                ? 3
+                : size.width && size.width >= 768
+                ? 2
+                : 1;
         const columnArrays: Photo[][] = Array.from(
             { length: columns },
             () => []
@@ -113,6 +117,17 @@ const HomePage: React.FC<HomePageProps> = () => {
                         ))}
                     </div>
                 ))}
+            </div>
+            <div className="flex justify-center mt-6">
+                <Button
+                    onClick={() => loadPhotos(startIndex, 30)}
+                    className="px-4 py-2 border rounded-lg text-lg font-medium hover:bg-gray-100"
+                    disabled={loading}
+                    variant="outline"
+                    size="lg"
+                >
+                    Más 🌉
+                </Button>
             </div>
         </div>
     );
