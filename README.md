@@ -1,6 +1,8 @@
 # GoldenGateTheMostIncredibleThing
 
-Este sitio hecho en honor al Golden Gate esta construido con React mediante NextJS, además de, TailwindCSS, ShadCN y Typescript. Esto principalmente porque fue utilizado para re-aprender desarrollo frontend con tecnologías actuales y con beneficios como el ServerSide Rendering.
+Este sitio hecho en honor al Golden Gate esta construido con React mediante NextJS, además de, TailwindCSS, ShadCN, Typescript y CheerioJS. Esto principalmente porque fue utilizado para re-aprender desarrollo frontend con tecnologías actuales y con beneficios como el ServerSide Rendering.
+
+Se uso CheerioJS/Scraping por sobre la API de Unsplash dado que concluyo que se parece a casos similares de desarrollo relacionados a Gokei.
 
 Además, se usaron tecnologías de apoyo para el desarrollo como lo son Docker/DevContainer de manera de asegurar su correcta ejecución en cualquier SO y modelos de LLM (chat gpt 4o) para el apoyo en el desarrollo de la tarea.
 
