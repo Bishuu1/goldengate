@@ -1,10 +1,12 @@
 # GoldenGateTheMostIncredibleThing
 
-Este sitio hecho en honor al Golden Gate esta construido construido con React mediante NextJS, además de, TailwindCSS, ShadCN y Typescript. Esto principalmente porque fue utilizado para re-aprender desarrollo frontend con tecnologías actuales y con beneficios como el ServerSide Rendering.
+Este sitio hecho en honor al Golden Gate esta construido con React mediante NextJS, además de, TailwindCSS, ShadCN y Typescript. Esto principalmente porque fue utilizado para re-aprender desarrollo frontend con tecnologías actuales y con beneficios como el ServerSide Rendering.
 
-Además, se usaron tecnologías de apoyo para el desarrollo como lo son Docker/DevContainer de manera de asegurar su correcta ejecución en cualquier SO.
+Además, se usaron tecnologías de apoyo para el desarrollo como lo son Docker/DevContainer de manera de asegurar su correcta ejecución en cualquier SO y modelos de LLM (chat gpt 4o) para el apoyo en el desarrollo de la tarea.
 
-Para ejecutar esta App se puede ejecutar con Docker, DevContainer o directamente con la aplicación.
+La tercera parte es parcialmente funcional, principalmente porque me falto tiempo para corregirla bien, por lo que carga imagenes nuevas pero se repiten algunas.
+
+Para ejecutar esta App se puede ejecutar con DevContainer o directamente con la aplicación.
 
 ## DevContainer (Recomendado)
 
@@ -15,6 +17,7 @@ Para utilizar devcontainer basta con instalar la extensión "Dev Containers" en 
 
 Una vez instalado solo es necesario ejecutar `npm run dev` para ejecutar la aplicación en
 http://localhost:3000/
+
 
 ## Guía usando solo NextJS sin Docker
 
