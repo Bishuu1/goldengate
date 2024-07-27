@@ -11,9 +11,9 @@ La tercera parte es parcialmente funcional, principalmente porque me falto tiemp
 Para ejecutar esta App se puede ejecutar con DevContainer o directamente con la aplicación.
 
 Debt:  
-- [] Implementar Skeleton / LazyLoading
-- [] Validar perfomance con Lighthouse
-- [] Implementar Catching
+- [ ] Implementar Skeleton / LazyLoading
+- [ ] Validar perfomance con Lighthouse
+- [ ] Implementar Catching
 
 ## DevContainer (Recomendado)
 
