@@ -10,6 +10,11 @@ La tercera parte es parcialmente funcional, principalmente porque me falto tiemp
 
 Para ejecutar esta App se puede ejecutar con DevContainer o directamente con la aplicación.
 
+Debt:  
+- [] Implementar Skeleton / LazyLoading
+- [] Validar perfomance con Lighthouse
+- [] Implementar Catching
+
 ## DevContainer (Recomendado)
 
 Dev Containers es una tecnología basada en contenedores que permite útilizar imágenes de docker directamente conectadas a VSCode, de esta manera todas las dependencias de desarrollo quedan encapsuladas en el contenedor -incluso las extensiones útilizadas- y no se carga contenido "basura" dentro de la máquina Host.
