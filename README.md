@@ -2,11 +2,9 @@
 
 Este sitio hecho en honor al Golden Gate esta construido con React mediante NextJS, además de, TailwindCSS, ShadCN, Typescript y CheerioJS. Esto principalmente porque fue utilizado para re-aprender desarrollo frontend con tecnologías actuales y con beneficios como el ServerSide Rendering.
 
-Se uso CheerioJS/Scraping por sobre la API de Unsplash dado que concluyo que se parece a casos similares de desarrollo relacionados a Gokei.
+Se uso CheerioJS/Scraping.
 
-Además, se usaron tecnologías de apoyo para el desarrollo como lo son Docker/DevContainer de manera de asegurar su correcta ejecución en cualquier SO, también se usaron modelos de LLM (chat gpt 4o) para el apoyo en el desarrollo de la tarea.
-
-La tercera parte es parcialmente funcional, principalmente porque me falto tiempo para corregirla bien, por lo que carga imagenes nuevas pero se repiten algunas.
+Además, se usaron tecnologías de apoyo para el desarrollo como lo son Docker/DevContainer de manera de asegurar su correcta ejecución en cualquier SO.
 
 Para ejecutar esta App se puede ejecutar con DevContainer o directamente con la aplicación.
 
